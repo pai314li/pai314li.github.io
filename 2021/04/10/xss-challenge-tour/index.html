@@ -20,19 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="XSS挑战-跨站脚本攻击使用的是谜团靶机平台：https:&#x2F;&#x2F;mituan.zone&#x2F; level 1查看网页源码,： 12345678910111213141516171819202122&lt;script&gt;score &#x3D; &quot;aaa&quot;;window.alert &#x3D; function()  &amp;#123;    score &#x3D; &quot;yes&quot;; if(co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/04/16/hello-world/index.html">
+<meta property="og:title" content="xss-challenge-tour">
+<meta property="og:url" content="http://example.com/2021/04/10/xss-challenge-tour/index.html">
 <meta property="og:site_name" content="p4i">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="XSS挑战-跨站脚本攻击使用的是谜团靶机平台：https:&#x2F;&#x2F;mituan.zone&#x2F; level 1查看网页源码,： 12345678910111213141516171819202122&lt;script&gt;score &#x3D; &quot;aaa&quot;;window.alert &#x3D; function()  &amp;#123;    score &#x3D; &quot;yes&quot;; if(co">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-16T01:29:23.460Z">
-<meta property="article:modified_time" content="2020-12-06T05:53:14.000Z">
+<meta property="og:image" content="https://gitee.com/paipai-xiaoga/md.image/raw/master/md.image/20210311112517.png">
+<meta property="article:published_time" content="2021-04-10T01:39:38.000Z">
+<meta property="article:modified_time" content="2021-04-16T01:42:31.671Z">
 <meta property="article:author" content="p4i">
+<meta property="article:tag" content="-web安全 -xss">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/paipai-xiaoga/md.image/raw/master/md.image/20210311112517.png">
 
-<link rel="canonical" href="http://example.com/2021/04/16/hello-world/">
+<link rel="canonical" href="http://example.com/2021/04/10/xss-challenge-tour/">
 
 
 <script id="page-configurations">
@@ -45,7 +48,7 @@
   };
 </script>
 
-  <title>Hello World | p4i</title>
+  <title>xss-challenge-tour | p4i</title>
   
 
 
@@ -166,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/10/xss-challenge-tour/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://s1.ax1x.com/2020/09/18/whXgjs.jpg">
@@ -179,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          xss-challenge-tour
         </h1>
 
         <div class="post-meta">
@@ -189,15 +192,24 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-16 09:29:23" itemprop="dateCreated datePublished" datetime="2021-04-16T09:29:23+08:00">2021-04-16</time>
+              <time title="创建时间：2021-04-10 09:39:38" itemprop="dateCreated datePublished" datetime="2021-04-10T09:39:38+08:00">2021-04-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-06 13:53:14" itemprop="dateModified" datetime="2020-12-06T13:53:14+08:00">2020-12-06</time>
+                <time title="修改时间：2021-04-16 09:42:31" itemprop="dateModified" datetime="2021-04-16T09:42:31+08:00">2021-04-16</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">web安全</span></a>
+                </span>
+            </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -217,22 +229,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+        <h1 id="XSS挑战-跨站脚本攻击"><a href="#XSS挑战-跨站脚本攻击" class="headerlink" title="XSS挑战-跨站脚本攻击"></a>XSS挑战-跨站脚本攻击</h1><p>使用的是谜团靶机平台：<a target="_blank" rel="noopener" href="https://mituan.zone/">https://mituan.zone/</a><br><img src="https://gitee.com/paipai-xiaoga/md.image/raw/master/md.image/20210311112517.png"></p>
+<h3 id="level-1"><a href="#level-1" class="headerlink" title="level 1"></a>level 1</h3><p>查看网页源码,：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">score = <span class="string">&quot;aaa&quot;</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="built_in">window</span>.alert = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)  </span></span></span><br><span class="line">&#123;    </span><br><span class="line"><span class="javascript">score = <span class="string">&quot;yes&quot;</span>; </span></span><br><span class="line"><span class="javascript"><span class="keyword">if</span>(confirm(<span class="string">&quot;通关成功! 请点击确认得分，取消直接进入下一题&quot;</span>))&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">	&#125;<span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript"> <span class="built_in">window</span>.location.href=<span class="string">&quot;level2.php?keyword=test&quot;</span>; </span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">checkscore</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">if</span> (score == <span class="string">&quot;yes&quot;</span>)&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">return</span> ture;</span></span><br><span class="line"><span class="javascript">&#125;<span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>根据提示，需要让网页弹窗，尝试直接对URL的参数进行修改</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.../level1.php?name=test<span class="tag">&lt;<span class="name">script</span>&gt;</span>alert(1)<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>弹出窗口，成功。</p>
+<h3 id="level-2"><a href="#level-2" class="headerlink" title="level 2"></a>level 2</h3><p>发现输入框，推测应该为注入点，f12打开开发者工具定位到<input>标签<br>尝试直接输入level 1参数实现弹窗，发现输入落在value属性值中<br>尝试绕过，先闭合input标签，然后实现弹窗</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">svg</span> <span class="attr">onload</span>=<span class="string">alert(1)</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>弹出窗口，成功。</p>
+<h3 id="level-3"><a href="#level-3" class="headerlink" title="level 3"></a>level 3</h3><p>发现与level 2同样的input输入框，尝试同样的绕过方式，发现没有弹窗，查看源码，双引号被转义<br>尝试使用单引号，发现单引号只能闭合value，还需要闭合input，直接用//注释掉</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;onclick=window.alert(1)//</span><br></pre></td></tr></table></figure>
+<p>出现弹窗，成功</p>
+<h3 id="level-4"><a href="#level-4" class="headerlink" title="level 4"></a>level 4</h3>
     </div>
 
     
@@ -240,6 +249,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/web%E5%AE%89%E5%85%A8-xss/" rel="tag"># -web安全 -xss</a>
+          </div>
 
         
 
@@ -247,10 +259,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/10/Docker/" rel="prev" title="Docker">
-      <i class="fa fa-chevron-left"></i> Docker
+    <a href="/2020/12/10/git%E7%9A%84%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="prev" title="git的使用总结">
+      <i class="fa fa-chevron-left"></i> git的使用总结
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/10/Docker/" rel="next" title="Docker">
+      Docker <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -309,7 +324,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS%E6%8C%91%E6%88%98-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB"><span class="nav-number">1.</span> <span class="nav-text">XSS挑战-跨站脚本攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#level-1"><span class="nav-number">1.0.1.</span> <span class="nav-text">level 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#level-2"><span class="nav-number">1.0.2.</span> <span class="nav-text">level 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#level-3"><span class="nav-number">1.0.3.</span> <span class="nav-text">level 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#level-4"><span class="nav-number">1.0.4.</span> <span class="nav-text">level 4</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
